@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "633450677254",
+    "firebase_url": "https://karaoque-bar.firebaseio.com",
+    "project_id": "karaoque-bar",
+    "storage_bucket": "karaoque-bar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633450677254:android:588f5f78438e50f3",
+        "android_client_info": {
+          "package_name": "vostore.karaoquebar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "633450677254-p2jq2jc9s7vps97789ko0sfh3veokdg0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vostore.karaoquebar",
+            "certificate_hash": "7ac5f4cf4875c42ba5404958d570ba6c9f533583"
+          }
+        },
+        {
+          "client_id": "633450677254-3na4pjen58rgarl1os3tfaf7eebpus6m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxmC9mYTxgwd1YItzUB83RdEvbpdLNAfY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "633450677254-3na4pjen58rgarl1os3tfaf7eebpus6m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

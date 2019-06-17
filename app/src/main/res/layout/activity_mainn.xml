@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo"
+    android:id="@+id/linearBackground"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linear_buscar_text_edit"
+        >
+
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="102dp"
+        android:layout_marginBottom="10sp"
+        android:fontFamily="@font/quicksand_bold"
+        android:gravity="center"
+        android:text="Buscar"
+        android:textColor="#ffffff"
+        android:textSize="50dp" />
+
+        <EditText
+            android:id="@+id/buscar_id"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/img_edit_text"
+            android:drawableStart="@drawable/img_lupa_pequena"
+            android:drawablePadding="5dp"
+            android:hint="Escolha sua musica"
+            android:inputType="text"
+            android:padding="5dp"
+            android:textColorHint="#838383"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear_todas_musicas"
+        android:layout_width="378dp"
+        android:layout_height="468dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="297dp">
+
+
+        <android.support.v7.widget.RecyclerView
+
+            android:id="@+id/id_recycler2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:visibility="visible"></android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_buscar_text_edit"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="246dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Escolha seu catálogo."
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2">
+
+
+            <Button
+                android:id="@+id/btn_internacional_id"
+                android:layout_width="180dp"
+                android:layout_height="98dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_musica_internacional"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/btn_nacional_id"
+                android:layout_width="174dp"
+                android:layout_height="99dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_musica_nacional"
+                android:gravity="center"
+                tools:layout_editor_absoluteX="83dp"
+                tools:layout_editor_absoluteY="284dp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="252dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Onde nos encontrar ?"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutt"
+            android:layout_width="430dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            tools:layout_editor_absoluteX="0dp">
+
+
+            <Button
+                android:id="@+id/btn_localizacao"
+                android:layout_width="110dp"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="442dp"
+                android:background="@drawable/btn_localizacao"
+                android:gravity="center"
+                tools:layout_editor_absoluteX="83dp"
+                tools:layout_editor_absoluteY="284dp" />
+
+            <Button
+                android:id="@+id/btn_redes_sociais_id"
+                android:layout_width="110dp"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="442dp"
+                android:background="@drawable/btn_redes"
+                android:gravity="center"
+                tools:layout_editor_absoluteX="83dp"
+                tools:layout_editor_absoluteY="284dp" />
+            4
+
+            <Button
+                android:id="@+id/btn_telefone_id"
+                android:layout_width="110dp"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="442dp"
+                android:background="@drawable/btn_telefone"
+                android:gravity="center"
+                tools:layout_editor_absoluteX="83dp"
+                tools:layout_editor_absoluteY="284dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
