@@ -44,13 +44,23 @@
             android:hint="Escolha sua musica"
             android:inputType="text"
             android:padding="5dp"
+            android:textAllCaps="true"
             android:textColorHint="#838383"
             android:textSize="20sp" />
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/linear_todas_musicas"
-        android:layout_width="378dp"
-        android:layout_height="468dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear_buscar_text_edit"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="13dp"
         android:orientation="vertical"
         android:visibility="gone"
         tools:layout_editor_absoluteX="13dp"
@@ -170,7 +180,7 @@
                 android:gravity="center"
                 tools:layout_editor_absoluteX="83dp"
                 tools:layout_editor_absoluteY="284dp" />
-            4
+
 
             <Button
                 android:id="@+id/btn_telefone_id"

@@ -67,7 +67,7 @@ public class MusicaNacional extends AppCompatActivity {
 
 
         reference2 = FirebaseDatabase.getInstance().getReference().child("Musica");
-        Query query1 = reference2.orderByChild("categoria").equalTo("1");
+        Query query1 = reference2;
         query1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull final DataSnapshot dataSnapshot) {
@@ -83,10 +83,9 @@ public class MusicaNacional extends AppCompatActivity {
                         String stringBranco = "";
                         if (buscarEdit.getText().length() > 0 )
                         {
-                            nomeparaBuscar = buscarEdit.getText().toString();
-                            String up =            nomeparaBuscar.toUpperCase();
+                            nomeparaBuscar = buscarEdit.getText().toString().toUpperCase();
 
-                            Query query2 = reference2.orderByChild("nomeMusica").startAt(up);
+                            Query query2 = reference2.orderByChild("nomeMusica").startAt(nomeparaBuscar);
 
                             query2.addValueEventListener(new ValueEventListener() {
                                 @Override
@@ -145,6 +144,8 @@ public class MusicaNacional extends AppCompatActivity {
         Intent intent = new Intent(MusicaNacional.this, MainActivity.class);
         startActivity(intent);
         finish();
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+
 
 
     }
