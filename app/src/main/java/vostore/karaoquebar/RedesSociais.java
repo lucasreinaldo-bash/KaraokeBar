@@ -29,7 +29,7 @@ import java.util.ArrayList;
 public class RedesSociais extends AppCompatActivity {
 
 
-    private Button btnFacebook,btnInstagram;
+    private Button btnFacebook,btnInstagram, btnYoutube;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,7 @@ public class RedesSociais extends AppCompatActivity {
 
         btnFacebook = findViewById(R.id.btn_facebook);
         btnInstagram = findViewById(R.id.btn_instagram);
+        btnYoutube = findViewById(R.id.btn_youtube);
 
 
         btnFacebook.setOnClickListener(new View.OnClickListener() {
@@ -60,7 +61,7 @@ public class RedesSociais extends AppCompatActivity {
         btnInstagram.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("http://instagram.com/_u/xxx");
+                Uri uri = Uri.parse("https://www.instagram.com/karaokebarcuritiba/");
                 Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
 
                 likeIng.setPackage("com.instagram.android");
@@ -70,6 +71,22 @@ public class RedesSociais extends AppCompatActivity {
                 } catch (ActivityNotFoundException e) {
                     startActivity(new Intent(Intent.ACTION_VIEW,
                             Uri.parse("https://www.instagram.com/karaokebarcuritiba/")));
+                }
+            }
+        });
+        btnYoutube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://www.youtube.com/channel/UCFlEcE0q8VDv0inC-QTjk-g/");
+                Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
+
+                likeIng.setPackage("com.youtube.android");
+
+                try {
+                    startActivity(likeIng);
+                } catch (ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("https://www.youtube.com/channel/UCFlEcE0q8VDv0inC-QTjk-g/")));
                 }
             }
         });

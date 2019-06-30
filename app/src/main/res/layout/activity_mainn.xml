@@ -41,7 +41,7 @@
             android:background="@drawable/img_edit_text"
             android:drawableStart="@drawable/img_lupa_pequena"
             android:drawablePadding="5dp"
-            android:hint="Escolha sua musica"
+            android:hint="Escolha sua música"
             android:inputType="text"
             android:padding="5dp"
             android:textAllCaps="true"
@@ -180,7 +180,7 @@
                 android:gravity="center"
                 tools:layout_editor_absoluteX="83dp"
                 tools:layout_editor_absoluteY="284dp" />
-            4
+
 
             <Button
                 android:id="@+id/btn_telefone_id"

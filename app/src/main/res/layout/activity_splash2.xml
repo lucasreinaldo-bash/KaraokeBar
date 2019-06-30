@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/byonce"
+    android:background="@drawable/novofundo"
     tools:context=".Splash">
 
 
@@ -13,9 +13,9 @@
         android:layout_height="477dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="346dp"
+        android:layout_marginTop="300dp"
         android:layout_marginBottom="0dp"
-        android:fontFamily="@font/quicksand_bold"
+        android:fontFamily="@font/quicksand"
         android:text="E ai, \n o que vamos cantar hoje ?"
         android:textAlignment="center"
         android:textColor="#ffffff"

@@ -7,7 +7,14 @@
     android:background="@drawable/fundo"
     android:id="@+id/linearBackground"
     tools:context=".MainActivity">
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,11 +23,10 @@
         >
 
 
-
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="57dp"
+            android:layout_height="300dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="102dp"
@@ -29,12 +35,12 @@
             android:gravity="center"
             android:text="Buscar"
             android:textColor="#ffffff"
-            android:textSize="50dp" />
+            android:textSize="150dp" />
 
         <EditText
             android:id="@+id/buscar_id"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="80dp"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
@@ -46,7 +52,7 @@
             android:padding="5dp"
             android:textAllCaps="true"
             android:textColorHint="#838383"
-            android:textSize="20sp" />
+            android:textSize="40dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -91,13 +97,13 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="246dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:fontFamily="@font/quicksand_bold"
             android:text="Escolha seu catálogo."
             android:textColor="#ffffff"
-            android:textSize="20sp" />
+            android:textSize="40dp" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -109,8 +115,8 @@
 
             <Button
                 android:id="@+id/btn_internacional_id"
-                android:layout_width="150dp"
-                android:layout_height="90dp"
+                android:layout_width="375dp"
+                android:layout_height="172dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/btn_musica_internacional"
@@ -118,8 +124,8 @@
 
             <Button
                 android:id="@+id/btn_nacional_id"
-                android:layout_width="150dp"
-                android:layout_height="90dp"
+                android:layout_width="375dp"
+                android:layout_height="172dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
@@ -134,19 +140,19 @@
 
 
         <TextView
-            android:layout_width="252dp"
-            android:layout_height="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="16dp"
             android:fontFamily="@font/quicksand_bold"
             android:text="Onde nos encontrar ?"
             android:textColor="#ffffff"
-            android:textSize="20sp" />
+            android:textSize="40dp" />
 
         <LinearLayout
             android:id="@+id/linearLayoutt"
-            android:layout_width="430dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:orientation="horizontal"
@@ -156,8 +162,8 @@
 
             <Button
                 android:id="@+id/btn_localizacao"
-                android:layout_width="90dp"
-                android:layout_height="80dp"
+                android:layout_width="194dp"
+                android:layout_height="179dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
@@ -169,8 +175,8 @@
 
             <Button
                 android:id="@+id/btn_redes_sociais_id"
-                android:layout_width="90dp"
-                android:layout_height="80dp"
+                android:layout_width="194dp"
+                android:layout_height="179dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
@@ -180,12 +186,12 @@
                 android:gravity="center"
                 tools:layout_editor_absoluteX="83dp"
                 tools:layout_editor_absoluteY="284dp" />
-            4
+
 
             <Button
                 android:id="@+id/btn_telefone_id"
-                android:layout_width="90dp"
-                android:layout_height="80dp"
+                android:layout_width="194dp"
+                android:layout_height="179dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
@@ -199,7 +205,8 @@
         </LinearLayout>
 
     </LinearLayout>
-
+    </LinearLayout>
+</ScrollView>
 
 
 </RelativeLayout>
