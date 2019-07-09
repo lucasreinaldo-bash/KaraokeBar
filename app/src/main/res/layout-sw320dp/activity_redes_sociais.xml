@@ -22,7 +22,7 @@
         android:layout_marginEnd="40sp"
         android:fontFamily="@font/quicksand_bold"
         android:gravity="center"
-        android:text="Siga as nossas \nRedes Sociais!"
+        android:text=" Siga as nossas \nRedes Sociais!"
         android:textAlignment="center"
         android:textColor="#585252"
         android:textSize="35sp" />

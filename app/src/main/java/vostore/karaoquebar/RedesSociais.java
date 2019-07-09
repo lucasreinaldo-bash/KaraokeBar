@@ -87,7 +87,7 @@ public class RedesSociais extends AppCompatActivity {
                 } catch (ActivityNotFoundException e) {
                     startActivity(new Intent(Intent.ACTION_VIEW,
                             Uri.parse("https://www.youtube.com/channel/UCFlEcE0q8VDv0inC-QTjk-g/")));
-                }
+                    }
             }
         });
 //        btn_home = findViewById(R.id.btn_home);
