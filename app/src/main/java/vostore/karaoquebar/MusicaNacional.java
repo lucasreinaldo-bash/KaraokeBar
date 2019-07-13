@@ -85,7 +85,7 @@ public class MusicaNacional extends AppCompatActivity {
                         {
                             nomeparaBuscar = buscarEdit.getText().toString().toUpperCase();
 
-                            Query query2 = reference2.orderByChild("nomeMusica").startAt(nomeparaBuscar);
+                            Query query2 = reference2.orderByChild("cantor").startAt(nomeparaBuscar);
 
                             query2.addValueEventListener(new ValueEventListener() {
                                 @Override

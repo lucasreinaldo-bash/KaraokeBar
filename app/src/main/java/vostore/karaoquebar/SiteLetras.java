@@ -21,6 +21,7 @@ public class SiteLetras extends AppCompatActivity {
 
 
     private WebView mWebView;
+    private Button voltar;
 
 
     @Override
@@ -32,7 +33,14 @@ public class SiteLetras extends AppCompatActivity {
         // bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#FF8F00")));
         Bundle extras = getIntent().getExtras();
         mWebView = (WebView) findViewById(R.id.site);
+        voltar = findViewById(R.id.text_voltar);
 
+        voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         //Recebendo informação de outra Activity
         if (null != getIntent()) {
             /** Pegamos o VALOR_1**/

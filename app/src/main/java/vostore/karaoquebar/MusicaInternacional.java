@@ -82,7 +82,7 @@ public class MusicaInternacional extends AppCompatActivity {
                             nomeparaBuscar = buscarEdit.getText().toString();
                             String up =            nomeparaBuscar.toUpperCase();
 
-                            Query query2 = reference2.orderByChild("nomeMusica").startAt(up);
+                            Query query2 = reference2.orderByChild("cantor").startAt(up);
 
                             query2.addValueEventListener(new ValueEventListener() {
                                 @Override

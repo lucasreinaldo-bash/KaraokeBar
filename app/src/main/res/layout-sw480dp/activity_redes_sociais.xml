@@ -44,13 +44,13 @@
             android:id="@+id/btn_facebook"
             android:layout_width="107dp"
             android:layout_height="96dp"
-            android:background="@drawable/face_icon" />
+            android:background="@drawable/btn_face" />
 
         <Button
             android:id="@+id/btn_instagram"
             android:layout_width="107dp"
             android:layout_height="96dp"
-            android:background="@drawable/insta_icon" />
+            android:background="@drawable/btn_insta" />
 
 
         <Button
@@ -58,7 +58,7 @@
             android:layout_width="87dp"
             android:layout_height="96dp"
             android:layout_marginLeft="5dp"
-            android:background="@drawable/yout" />
+            android:background="@drawable/btn_yout" />
 
 
 
