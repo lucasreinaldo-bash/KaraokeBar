@@ -67,60 +67,18 @@ public class MusicaNacional extends AppCompatActivity {
 
 
         reference2 = FirebaseDatabase.getInstance().getReference().child("Musica");
-        Query query1 = reference2;
+        Query query1 = reference2.orderByChild("cantor").startAt("A");
         query1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull final DataSnapshot dataSnapshot) {
+                list2 = new ArrayList<MusicasNacionais>();
+                for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                    MusicasNacionais p = dataSnapshot1.getValue(MusicasNacionais.class);
+                    list2.add(p);
+                }
 
-                buscarEdit.addTextChangedListener(new TextWatcher() {
-                    @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    }
-
-                    @Override
-                    public void onTextChanged(CharSequence s, int start, int before, int count) {
-                        String stringBranco = "";
-                        if (buscarEdit.getText().length() > 0 )
-                        {
-                            nomeparaBuscar = buscarEdit.getText().toString().toUpperCase();
-
-                            Query query2 = reference2.orderByChild("cantor").startAt(nomeparaBuscar);
-
-                            query2.addValueEventListener(new ValueEventListener() {
-                                @Override
-                                public void onDataChange(DataSnapshot dataSnapshot) {
-
-                                    list2 = new ArrayList<MusicasNacionais>();
-                                    for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                                        MusicasNacionais p = dataSnapshot1.getValue(MusicasNacionais.class);
-                                        list2.add(p);
-                                    }
-
-                                    adapter2 = new MyAdapterNacionais(MusicaNacional.this, list2);
-                                    recyclerView2.setAdapter(adapter2);
-
-
-                                }
-
-                                @Override
-                                public void onCancelled(DatabaseError databaseError) {
-
-                                }
-                            });
-
-
-                        }
-                        else{
-                            Toast.makeText(MusicaNacional.this, "Digite o nome da musica nesse campo", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-
-                    @Override
-                    public void afterTextChanged(Editable s) {
-
-                    }
-                });
+                adapter2 = new MyAdapterNacionais(MusicaNacional.this, list2);
+                recyclerView2.setAdapter(adapter2);
 
 
 

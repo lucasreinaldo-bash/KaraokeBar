@@ -56,68 +56,24 @@ public class MusicaInternacional extends AppCompatActivity {
 //        btn_home = findViewById(R.id.btn_home);
 //        btn_voltar = findViewById(R.id.btn_voltar);
         recyclerView2 = (RecyclerView) findViewById(R.id.id_recycler2);
-        buscarEdit = findViewById(R.id.buscar_id);
         recyclerView2.setLayoutManager(new LinearLayoutManager(this));
 
         //Fazendo cast dos botões Experts
 
 
         reference2 = FirebaseDatabase.getInstance().getReference().child("Music");
-        Query query1 = reference2.startAt("A");
+        Query query1 = reference2.orderByChild("cantor").startAt("A");
         query1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull final DataSnapshot dataSnapshot) {
+                list2 = new ArrayList<MusicasNacionais>();
+                for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                    MusicasNacionais p = dataSnapshot1.getValue(MusicasNacionais.class);
+                    list2.add(p);
+                }
 
-                buscarEdit.addTextChangedListener(new TextWatcher() {
-                    @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    }
-
-                    @Override
-                    public void onTextChanged(CharSequence s, int start, int before, int count) {
-                        String stringBranco = "";
-                        if (buscarEdit.getText().length() > 0 )
-                        {
-                            nomeparaBuscar = buscarEdit.getText().toString();
-                            String up =            nomeparaBuscar.toUpperCase();
-
-                            Query query2 = reference2.orderByChild("cantor").startAt(up);
-
-                            query2.addValueEventListener(new ValueEventListener() {
-                                @Override
-                                public void onDataChange(DataSnapshot dataSnapshot) {
-
-                                    list2 = new ArrayList<MusicasNacionais>();
-                                    for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                                        MusicasNacionais p = dataSnapshot1.getValue(MusicasNacionais.class);
-                                        list2.add(p);
-                                    }
-
-                                    adapter2 = new MyAdapterNacionais(MusicaInternacional.this, list2);
-                                    recyclerView2.setAdapter(adapter2);
-
-
-                                }
-
-                                @Override
-                                public void onCancelled(DatabaseError databaseError) {
-
-                                }
-                            });
-
-
-                        }
-                        else{
-                            Toast.makeText(MusicaInternacional.this, "Digite o nome da musica nesse campo", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-
-                    @Override
-                    public void afterTextChanged(Editable s) {
-
-                    }
-                });
+                adapter2 = new MyAdapterNacionais(MusicaInternacional.this, list2);
+                recyclerView2.setAdapter(adapter2);
 
 
 
